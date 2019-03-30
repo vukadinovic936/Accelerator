@@ -1,0 +1,54 @@
+
+.panel-group {
+    margin-bottom: 0;
+}
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+}
+.panel-group .panel .panel-heading {
+    padding: 0;
+}
+.panel-group .panel .panel-heading h4 a {
+    background: #f6f9fc;
+    display: block;
+    font-size: 15px;
+    line-height: 20px;
+    padding: 15px;
+    text-decoration: none;
+    transition: 0.15s all ease-in-out;
+}
+.panel-group .panel .panel-heading h4 a:hover, .panel-group .panel .panel-heading h4 a:not(.collapsed) {
+    /*background: #fff;*/
+    transition: 0.15s all ease-in-out;
+}
+.panel-group .panel .panel-heading h4 a:not(.collapsed) i:before {
+    content: "-";
+    font-size: 30px;
+    line-height: 10px;
+}
+.panel-group .panel .panel-heading h4 a i {
+    color: #999;
+    font-size: 12px;
+}
+.panel-group .panel .panel-body {
+    padding-top: 0;
+}
+.panel-group .panel .panel-heading + .panel-collapse > .list-group,
+.panel-group .panel .panel-heading + .panel-collapse > .panel-body {
+    border-top: none;
+}
+.panel-group .panel + .panel {
+    border-top: none;
+    margin-top: 0;
+}
+.collapse{
+	display:block !important;
+}
+
+.fa-plus{
+	display:none !important;
+}
+
+
+
