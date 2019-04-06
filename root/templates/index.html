@@ -4,8 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta name="description" content="">
   <meta name="author" content="">
 
   <title> Accelerator - Start Your Own Business</title>
@@ -38,9 +37,9 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item mx-0 mx-lg-1">
+          <!--<li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Sponsors</a>
-          </li>
+	    </li> --!>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
           </li>
@@ -55,14 +54,14 @@
   <!-- Header -->
   <header class="masthead bg-primary text-white text-center">
     <div class="container">
-	    <img class="img-fluid mb-5 d-block mx-auto" src="static/img/portfolio/profile.png" alt="">
+	    <img class="img-fluid mb-5 d-block mx-auto" src="static/img/portfolio/logo1.png" alt="">
       <h1 class="text-uppercase mb-0">Start your own business </h1>
       <hr class="star-light">
       <h2 class="font-weight-light mb-0"> 4 MONTHS - 5000$ - 1 IDEA </h2>
     </div>
   </header>
 
-  <!-- Portfolio Grid Section -->
+  <!-- Portfolio Grid Section 
   <section class="portfolio" id="portfolio">
     <div class="container">
       <h2 class="text-center text-uppercase text-secondary mb-0">Sponsors</h2>
@@ -131,7 +130,7 @@
       </div>
     </div>
   </section>
-
+!-->
   <!-- About Section -->
   <section class="bg-primary text-white mb-0" id="about">
     <div class="container">
@@ -346,15 +345,13 @@ What are you waiting for
           <h4 class="text-uppercase mb-4">Got you interested?</h4>
 	  <p class="lead mb-0"> Leave your email and we will update you when the application window is open. </p>
 	  </br>
- <form >
-  <div class="input-group">
-	  <div class="col-md-4"></div>
-    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
-<input type="submit" value="submit">
-	  <div class="col-md-4"></div>
-</form> 
+	  <form class="emailInput" method="post">
+		  {% csrf_token %}
+		  {{ form.as_p }}
+		  <button type="submit" class="btn-primary"> Submit </button>
+	  </form>
+	  <h2> {{ text }} </h2>
 	  </div>
-        </div>
 
         <div class="col-md-6 mb-5 mb-lg-0">
           <h4 class="text-uppercase mb-4">Location</h4>
